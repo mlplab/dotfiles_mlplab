@@ -1,1 +1,1 @@
-/home/kohei/dotfiles/.emacs.d
+/home/yorimoto/dotfiles_mlplab/.emacs.d
