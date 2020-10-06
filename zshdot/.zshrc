@@ -62,3 +62,7 @@ function mkcd(){
 
 # added by Anaconda3 installer
 export PATH="$HOME/anaconda3/bin:$PATH"
+
+
+# export git editor
+export GIT_EDITOR=vim
