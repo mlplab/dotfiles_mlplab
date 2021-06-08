@@ -24,10 +24,10 @@ function rprompt-git-current-branch {
     branch_status="%F{white}"
   elif [[ -n `echo "$st" | grep "^Untracked files"` ]]; then
     # git 管理されていないファイルがある状態
-    branch_status="%F{red}?"
+    branch_status="%F{magenta}?"
   elif [[ -n `echo "$st" | grep "^Changes not staged for commit"` ]]; then
     # git add されていないファイルがある状態
-    branch_status="%F{red}+"
+    branch_status="%F{magenta}+"
   elif [[ -n `echo "$st" | grep "^Changes to be committed"` ]]; then
     # git commit されていないファイルがある状態
     branch_status="%F{yellow}!"
@@ -37,7 +37,7 @@ function rprompt-git-current-branch {
     return
   else
     # 上記以外の状態の場合
-    branch_status="%F{blue}"
+    branch_status="%F{cyan}"
   fi
   # ブランチ名を色付きで表示する
   echo "${branch_status}[$branch_name]"
