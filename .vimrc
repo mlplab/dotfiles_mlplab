@@ -375,3 +375,36 @@ nnoremap <silent> <C-u> <cmd>call <SID>smooth_scroll('up')<CR>
 nnoremap <silent> <C-d> <cmd>call <SID>smooth_scroll('down')<CR>
 vnoremap <silent> <C-u> <cmd>call <SID>smooth_scroll('up')<CR>
 vnoremap <silent> <C-d> <cmd>call <SID>smooth_scroll('down')<CR>
+
+let g:airline_theme = 'bubblegum'
+set laststatus=2
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#wordcount#enabled = 1
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+
+"左側に使用されるセパレータ
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+"右側に使用されるセパレータ
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.crypt = '🔒'		"暗号化されたファイル
+let g:airline_symbols.linenr = '¶'			"行
+let g:airline_symbols.maxlinenr = '㏑'		"最大行
+let g:airline_symbols.branch = '⭠'		"gitブランチ
+let g:airline_symbols.paste = 'ρ'			"ペーストモード
+let g:airline_symbols.spell = 'Ꞩ'			"スペルチェック
+let g:airline_symbols.notexists = '∄'		"gitで管理されていない場合
+let g:airline_symbols.whitespace = 'Ξ'	"空白の警告(余分な空白など)
+let g:airline#extensions#default#layout = [['a', 'b', 'c'], ['x', 'y', 'z']]
+let g:airline_section_c = '%t'
+let g:airline_section_x = '%{&filetype}'
+set ttimeoutlen=50
+" let g:airline_section_z = '%3l:%2v %{airline#extensions#ale#get_warning()} %{airline#extensions#ale#get_error()}'
+let g:airline#extensions#ale#error_symbol = ' '
+let g:airline#extensions#ale#warning_symbol = ' '
+let g:airline#extensions#default#section_truncate_width = {}
+let g:airline#extensions#whitespace#enabled = 1
